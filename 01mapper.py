@@ -1,14 +1,14 @@
 # Priyanka Thamababathula
 # This is an example mapper.
 
-f = open("purchases.txt","r")  # open file, read-only
-o = open("out01.txt", "w") # open file, write
+f = open("purchasedata.txt","r")
+o = open("output1.txt","w")           # open file, read-only
 for line in f:  
-    rowList = line.strip().split("    ") 
-    print (rowList )
-    print (len(rowList ))
-    if len(rowList) == 6:
-        date, time, location, dept, amount, payType = rowList  #assign names
+    outputList = line.strip().split("    ")    # count the spaces!
+    print (outputList   )
+    print (len(outputList  ))
+    if len(outputList  ) == 6:
+        date, time, location, dept, amount, payType = outputList  #assign names
         print ("{0}\t{1}".format(location, amount))
         o.write("{0}\t{1}\n".format(location, amount))
 f.close()
