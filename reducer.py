@@ -1,4 +1,4 @@
-s = open("s.txt","r")
+s = open("sorterS1.txt","r")
 r = open("r.txt", "w")
 
 thisKey = ""
